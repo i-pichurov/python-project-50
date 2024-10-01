@@ -18,3 +18,6 @@ package-reinstall:
 
 lint:
 	poetry run flake8 gendiff
+
+say-hello:
+	echo "Hello, world!"
