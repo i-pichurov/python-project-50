@@ -13,11 +13,9 @@ package-install:
 package-reinstall:
 	pip install --user --force-reinstall dist/*.whl
 
-lint:
+check:
 	poetry run flake8 gendiff
-
-test:
 	poetry run pytest -vv
 
-say-hello:
-	echo "Hello, world!"
+test-coverage:
+	poetry run pytest --cov
