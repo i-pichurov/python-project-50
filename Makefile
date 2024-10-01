@@ -1,9 +1,6 @@
 install:
 	poetry install
 
-gen_diff:
-	poetry run gendiff gendiff/file1.json gendiff/file1.json
-
 build:
 	poetry build
 
@@ -18,6 +15,9 @@ package-reinstall:
 
 lint:
 	poetry run flake8 gendiff
+
+test:
+	poetry run pytest -vv
 
 say-hello:
 	echo "Hello, world!"
