@@ -1,5 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/i-pichurov/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/i-pichurov/python-project-50/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b6ce91f2ba29e5d2e857/maintainability)](https://codeclimate.com/github/i-pichurov/python-project-50/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b6ce91f2ba29e5d2e857/test_coverage)](https://codeclimate.com/github/i-pichurov/python-project-50/test_coverage)
 
 # **Asciinemas of steps:**
 
