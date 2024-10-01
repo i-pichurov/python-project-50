@@ -12,9 +12,9 @@ def bool_to_lower_str(data: dict):
 def generate_diff(first_file, second_file):
 
     # Распаковываем json-файлы в словари.
-    with open (first_file, 'r') as file1:
+    with open(first_file, 'r') as file1:
         data1 = bool_to_lower_str(json.load(file1))
-    with open (second_file, 'r') as file2:
+    with open(second_file, 'r') as file2:
         data2 = bool_to_lower_str(json.load(file2))
 
     # Формируем строку с результатом.
