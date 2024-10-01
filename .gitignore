@@ -4,3 +4,4 @@ __pycache__/
 *.cast
 .pytest_cache/
 .coverage
+coverage.xml
