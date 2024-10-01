@@ -1,6 +1,9 @@
 install:
 	poetry install
 
+gen_diff:
+	poetry run gendiff gendiff/file1.json gendiff/file1.json
+
 build:
 	poetry build
 
@@ -12,3 +15,6 @@ package-install:
 
 package-reinstall:
 	pip install --user --force-reinstall dist/*.whl
+
+lint:
+	poetry run flake8 gendiff
