@@ -24,17 +24,17 @@ def generate_diff(first_file, second_file):
 
     for key, value in sorted(merged_dict.items()):
         if key not in data1:
-            result.append(f'+ {key}: {value}')
+            result.append(f'  + {key}: {value}')
 
         elif key not in data2:
-            result.append(f'- {key}: {value}')
+            result.append(f'  - {key}: {value}')
 
         elif data1[key] == data2[key]:
-            result.append(f'  {key}: {value}')
+            result.append(f'    {key}: {value}')
 
         else:
-            result.append(f'- {key}: {data1[key]}')
-            result.append(f'+ {key}: {data2[key]}')
+            result.append(f'  - {key}: {data1[key]}')
+            result.append(f'  + {key}: {data2[key]}')
 
     result.append("}")
     return "\n".join(result)
