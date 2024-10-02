@@ -7,3 +7,4 @@
 # **Asciinemas of steps:**
 
 [Step 4](https://asciinema.org/a/EnQSchMSnZ4BArI8pBKtW3WXZ)
+[Step 6](https://asciinema.org/a/HFwDeesRtKdSC48zAibKDc6HM)
