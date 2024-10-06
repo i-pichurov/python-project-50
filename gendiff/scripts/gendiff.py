@@ -12,11 +12,12 @@ parser.add_argument(
     'second_file', type=str,
     help='Input second file for comparison')
 parser.add_argument('-f', '--format', type=str, help='set format of output')
+parser.set_defaults(format='stylish')
 args = parser.parse_args()
 
 
 def main():
-    print(engine(args.first_file, args.second_file))
+    print(engine(args.first_file, args.second_file, args.format))
 
 
 if __name__ == '__main__':
