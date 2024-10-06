@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import argparse
-from gendiff import generate_diff
+from gendiff import engine
 
 
 parser = argparse.ArgumentParser(
@@ -16,7 +16,7 @@ args = parser.parse_args()
 
 
 def main():
-    generate_diff(args.first_file, args.second_file)
+    print(engine(args.first_file, args.second_file))
 
 
 if __name__ == '__main__':
