@@ -11,8 +11,8 @@ parser.add_argument(
 parser.add_argument(
     'second_file', type=str,
     help='Input second file for comparison')
-parser.add_argument('-f', '--format', type=str, help='set format of output')
-parser.set_defaults(format='stylish')
+parser.add_argument('-f', '--format', type=str,
+                    default='stylish', help='set format of output')
 args = parser.parse_args()
 
 
