@@ -17,8 +17,6 @@ def test_engine():
     # Тестриуем результат функции с yml-файлами и образцовой строкой
     assert engine('tests/fixtures/filepath1.yml', 'tests/fixtures/filepath2.yml') == result
 
-
-def test_engine():
     # Тестриуем результат функции с json-файлами и образцовой строкой
     assert engine('tests/fixtures/file1_rec.json', 'tests/fixtures/file2_rec.json') == result_rec
 
