@@ -35,11 +35,19 @@ def nested(key, value1, value2):
     return {
         'name': key,
         'type': 'nested',
-        'children': gen_diff(value1, value2)
+        'children': calculate_diff(value1, value2)
     }
 
 
-def gen_diff(data1, data2):
+def make_root(data):
+    return {
+        'name': 'main',
+        'type': 'root',
+        'children': data
+    }
+
+
+def calculate_diff(data1, data2):
 
     added_keys = data2.keys() - data1.keys()
     removed_keys = data1.keys() - data2.keys()
@@ -59,3 +67,7 @@ def gen_diff(data1, data2):
         else:
             result.append(unchanged(key, data1[key]))
     return result
+
+
+def diff(data1, data2):
+    return make_root(calculate_diff(data1, data2))
