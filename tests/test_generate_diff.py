@@ -1,8 +1,9 @@
 from gendiff import engine
+import json
 
 
 # Извлекаем плоскую образцовую строку
-with open('tests/fixtures/result.txt') as r:
+with open('tests/fixtures/result.txt', 'r') as r:
         result = r.read()
 
 # Извлекаем многоуровневую образцовую stylish-строку
@@ -12,6 +13,9 @@ with open('tests/fixtures/result_stylish.txt') as r:
 # Извлекаем многоуровневую образцовую stylish-строку
 with open('tests/fixtures/result_plain.txt') as r:
         result_plain = r.read()
+
+with open('tests/fixtures/result_json.json', 'r') as r:
+       result_json = json.load(r)
 
 def test_engine():
     # Тестриуем результат функции с плоскими json/yml -файлами
@@ -26,3 +30,6 @@ def test_engine():
     assert engine('tests/fixtures/file1_rec.json', 'tests/fixtures/file2_rec.json', 'plain') == result_plain
     assert engine('tests/fixtures/file1_rec.json', 'tests/fixtures/file2_rec.json', 'plain') == result_plain
 
+    # Тестриуем результат функции с вложенными json/yml -файлами в режиме json
+    assert json.loads(engine('tests/fixtures/file1_rec.json', 'tests/fixtures/file2_rec.json', 'json')) == result_json
+    assert json.loads(engine('tests/fixtures/file1_rec.json', 'tests/fixtures/file2_rec.json', 'json')) == result_json
