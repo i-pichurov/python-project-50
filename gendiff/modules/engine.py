@@ -1,6 +1,6 @@
 from gendiff.modules.parser import pars_to_dict
-from gendiff.modules.generate_diff_2 import diff
-from gendiff.modules.set_format import set_format
+from gendiff.modules.calculate_diff import diff
+from gendiff.modules.formatter import set_format
 
 
 def engine(first_file, second_file, format_name='stylish'):
