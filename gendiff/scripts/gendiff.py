@@ -17,6 +17,11 @@ args = parser.parse_args()
 
 
 def main():
+    """
+    Calls the generate_diff() function from gendiff module.
+    Args:
+        module: gendiff/modules/generate_diff.py
+    """
     print(generate_diff(args.first_file, args.second_file, args.format))
 
 

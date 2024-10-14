@@ -5,6 +5,20 @@ SEPARATOR = ' '
 
 
 def stylish(data, depth=2):
+    """
+    Takes a dictionary containing the result of the diff() function
+    from the calculate_diff module and produces a string.
+    This string is formed taking into account the presence
+    of nested data structures and is sorted.
+
+    Args:
+        data: dict containing the result of the diff()
+        depth: int containing the number of indents
+
+    Returns:
+        Sorted string formed taking into account nested structures.
+        String contains indents and nesting
+    """
     space = depth * SEPARATOR
     tree = []
     children = data.get('children')
@@ -34,6 +48,9 @@ def stylish(data, depth=2):
 
 
 def to_str(data, depth=4):
+    """
+    Checks the argument type and returns the required value depending on it.
+    """
     if data is None:
         return 'null'
     if isinstance(data, bool):

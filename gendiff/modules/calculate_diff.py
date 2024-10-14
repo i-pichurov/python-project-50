@@ -1,4 +1,7 @@
 def added(key, value):
+    """
+    Creates a node of type 'added'.
+    """
     return {
         'name': key,
         'type': 'added',
@@ -7,6 +10,9 @@ def added(key, value):
 
 
 def removed(key, value):
+    """
+    Creates a node of type 'removed'.
+    """
     return {
         'name': key,
         'type': 'removed',
@@ -15,6 +21,9 @@ def removed(key, value):
 
 
 def unchanged(key, value):
+    """
+    Creates a node of type 'unchanged'.
+    """
     return {
         'name': key,
         'type': 'unchanged',
@@ -23,6 +32,9 @@ def unchanged(key, value):
 
 
 def changed(key, value1, value2):
+    """
+    Creates a node of type 'changed'.
+    """
     return {
         'name': key,
         'type': 'changed',
@@ -32,6 +44,9 @@ def changed(key, value1, value2):
 
 
 def nested(key, value1, value2):
+    """
+    Creates a node of type 'nested'.
+    """
     return {
         'name': key,
         'type': 'nested',
@@ -40,6 +55,9 @@ def nested(key, value1, value2):
 
 
 def make_root(data):
+    """
+    Creates a root node.
+    """
     return {
         'name': 'main',
         'type': 'root',
@@ -48,6 +66,18 @@ def make_root(data):
 
 
 def calculate_diff(data1, data2):
+    """
+    Computes the differences between two files and
+    produces a dictionary containing an internal representation
+    of their differences.
+
+    Args:
+        data1: dict
+        data: dict
+
+    Returns:
+        dict containing an internal representation of their differences
+    """
 
     added_keys = data2.keys() - data1.keys()
     removed_keys = data1.keys() - data2.keys()
@@ -70,4 +100,7 @@ def calculate_diff(data1, data2):
 
 
 def diff(data1, data2):
+    """
+    Wraps the result of the calculate_diff() function in the 'root' node.
+    """
     return make_root(calculate_diff(data1, data2))
