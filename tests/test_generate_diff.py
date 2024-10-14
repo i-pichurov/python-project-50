@@ -4,15 +4,16 @@ import json
 
 # Извлекаем образцовую stylish-строку
 with open('tests/fixtures/result_stylish.txt') as r:
-        result_stylish = r.read()
+    result_stylish = r.read()
 
 # Извлекаем образцовую plain-строку
 with open('tests/fixtures/result_plain.txt') as r:
-        result_plain = r.read()
+    result_plain = r.read()
 
 # Извлекаем образцовый json
 with open('tests/fixtures/result_json.json', 'r') as r:
-       result_json = json.load(r)
+    result_json = json.load(r)
+
 
 def test_generate_diff():
     # Тестриуем результат функции с вложенными json/yml -файлами в режиме stylish
