@@ -20,5 +20,5 @@ def pars_to_dict(file):
         elif file.endswith(('.yml', '.yaml')):
             data = yaml.load(file1, Loader=SafeLoader)
         else:
-            raise Exception('Задан неверный тип файла!')
+            raise Exception('The file type is invalid.')
     return data
