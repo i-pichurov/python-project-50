@@ -1,5 +1,6 @@
-from gendiff import generate_diff
+from gendiff import generate_diff, pars_to_dict
 import json
+import pytest
 
 
 # Извлекаем образцовую stylish-строку
@@ -27,3 +28,11 @@ def test_generate_diff():
     # Тестриуем результат функции с вложенными json/yml -файлами в режиме json
     assert json.loads(generate_diff('tests/fixtures/file1.json', 'tests/fixtures/file2.json', 'json')) == result_json
     assert json.loads(generate_diff('tests/fixtures/file1.json', 'tests/fixtures/file2.json', 'json')) == result_json
+
+    # Тестируем выпадение ошибки при некорректном format_name
+    with pytest.raises(Exception):
+        generate_diff('tests/fixtures/file1.json', 'tests/fixtures/file2.json', 'spanish')
+
+    # Тестируем выпадение ошибки при некорректном file_format
+    with pytest.raises(Exception):
+        generate_diff('tests/fixtures/file1.txt', 'tests/fixtures/file2.txt')
