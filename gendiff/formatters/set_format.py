@@ -1,6 +1,6 @@
-from gendiff.modules.formats.stylish import stylish
-from gendiff.modules.formats.plain import plain
-from gendiff.modules.formats.json import to_json
+from gendiff.formatters.stylish import stylish
+from gendiff.formatters.plain import plain
+from gendiff.formatters.json import to_json
 
 
 def set_format(data, format_name='stylish'):
