@@ -29,3 +29,5 @@ def set_format(data, format_name='stylish'):
             return plain(data)
         case 'json':
             return to_json(data)
+        case _:
+            raise Exception('The format name is invalid.')
