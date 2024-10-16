@@ -1,4 +1,4 @@
-from gendiff import generate_diff, pars_to_dict
+from gendiff import generate_diff
 import json
 import pytest
 
