@@ -3,7 +3,7 @@ from gendiff.formatters.plain import plain
 from gendiff.formatters.json import to_json
 
 
-def set_format(data, format_name='stylish'):
+def set_format(format_name='stylish'):
     """
     Depending on the value of 'format_name',
     returns information from 'data' in the desired format.
@@ -24,10 +24,10 @@ def set_format(data, format_name='stylish'):
     """
     match format_name:
         case 'stylish':
-            return stylish(data)
+            return stylish
         case 'plain':
-            return plain(data)
+            return plain
         case 'json':
-            return to_json(data)
+            return to_json
         case _:
             raise Exception('The format name is invalid.')
