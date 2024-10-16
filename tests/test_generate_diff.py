@@ -61,7 +61,7 @@ import pytest
         ),
     ])
 def test_generate_diff(first_file, second_file, format_name, result_fixture):
-    with open (result_fixture) as r:
+    with open(result_fixture) as r:
         result = r.read()
     assert generate_diff(first_file, second_file, format_name) == result
 
