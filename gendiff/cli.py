@@ -1,7 +1,11 @@
 import argparse
 
 
-def cli():
+def interact_with_cl():
+    """
+    A text-based interface where
+    you can input commands that interact with a programm.
+    """
     parser = argparse.ArgumentParser(
         description='Compares two configuration files and shows a difference.')
     parser.add_argument(
