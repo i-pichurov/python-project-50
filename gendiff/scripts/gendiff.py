@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from gendiff import generate_diff
-from gendiff.cli import cli
+from gendiff.cli import interact_with_cl
 
 
 def main():
@@ -9,7 +9,7 @@ def main():
     Args:
         module: gendiff/modules/generate_diff.py
     """
-    first_file, second_file, format = cli()
+    first_file, second_file, format = interact_with_cl()
     print(generate_diff(first_file, second_file, format))
 
 
