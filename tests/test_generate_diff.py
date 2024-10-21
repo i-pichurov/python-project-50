@@ -65,8 +65,12 @@ def test_generate_diff(first_file, second_file, format_name, result_fixture):
         result = r.read()
     assert generate_diff(first_file, second_file, format_name) == result
 
+
+def test_generate_diff_format_name():
     with pytest.raises(Exception):
         generate_diff('tests/fixtures/file1.json', 'tests/fixtures/file2.json', 'spanish')
 
+
+def test_generate_diff_files_format():
     with pytest.raises(Exception):
         generate_diff('tests/fixtures/file1.txt', 'tests/fixtures/file2.txt')
